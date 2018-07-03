@@ -1,0 +1,15 @@
+{
+  "name": "brightcove-proxy",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "devDependencies": {
+    "express": "*",
+    "ooyala": "0.0.8",
+    "ooyala-api": "^0.14.1",
+    "path": "*",
+    "request": "*"
+  },
+  "dependencies": {}
+}
