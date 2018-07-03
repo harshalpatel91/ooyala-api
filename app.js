@@ -14,7 +14,10 @@ app.use('/ooyala', function(req, res) {
 	var ooyalaSecretKey = req.headers.secret;
 	var api = new ooyalaApi(ooyalaApiKey, ooyalaSecretKey, {concurrency: 6});
 
-	//res.setHeader('Content-Type', 'application/json');
+	res.header('Access-Control-Allow-Origin', '*');
+    res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS');
+    res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization, Content-Length, X-Requested-With');
+
 
 	api.get(req.url)
 		.then((body) => {
